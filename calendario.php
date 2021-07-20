@@ -12,12 +12,18 @@
 	<body>
 		<?php
 			function linha($semana){
-				//return "<tr>".
-				//	for($i = 0; i<=7; i++){
-				//		'<td>{$semana[$i]}</td>'
-				//	}
-				//."</tr>";
-				return "
+				$linha = '<tr>';
+					for($i=0; $i <=6; $i++){
+						if(array_key_exists($i, $semana)){
+							$linha .= "<td>{$semana[$i]}</td>";
+						}else{
+							$linha .= "<td></td>";
+						}
+					}
+				$linha .= '</tr>';
+
+				return $linha;
+				/*return "
 					<tr>
 						<td>{$semana[0]}</td>
 						<td>{$semana[1]}</td>
@@ -27,7 +33,7 @@
 						<td>{$semana[5]}</td>
 						<td>{$semana[6]}</td>
 					</tr>
-				";
+				";*/
 			}
 			function calendario(){
 				$calendario = "";
