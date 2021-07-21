@@ -39,6 +39,8 @@
 				$calendario = "";
 				$dia = 1;
 				$semana = [];
+				//Variável $diaAtual criada para deixar em negrito o dia atual
+				$diaAtual = date('j');
 				
 				while($dia <= 31){
 					array_push($semana, $dia);
